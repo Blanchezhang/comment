@@ -13,10 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIColor (Chained)
 /**
  *  将#(XXXXXX)的16位进制色值转换为UIColor对象
- *
- *  @param hexString 色值字符串
- *  @param alpha     透明度（0 - 1）
- *
  *  @return UIColor对象
  */
 + (UIColor *(^)(NSString* hexString,CGFloat alpha))colorWithHexStringAndAlpha;
@@ -24,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  将#(XXXXXX)的16位进制色值转换为UIColor对象
  *
- *  @param hexString 色值字符串
  *
  *  @return UIColor对象
  */
