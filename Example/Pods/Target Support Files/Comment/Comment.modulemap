@@ -1,0 +1,6 @@
+framework module Comment {
+  umbrella header "Comment-umbrella.h"
+
+  export *
+  module * { export * }
+}
