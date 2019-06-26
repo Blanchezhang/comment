@@ -22,6 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (UILabel * (^)(NSInteger lineNumber))CH_NumberOfLines;
 - (UILabel * (^)(NSAttributedString *attributedText))CH_AttributedText;
 
+
+
++(UILabel * (^)(void))CH_Alloc;
+
++(UILabel * (^)(CGRect rect))CH_InitFrame;
+
++(UILabel * (^)(void))CH_Init;
+
+-(UILabel * (^)(void))CH_init;
+
 @end
 
 NS_ASSUME_NONNULL_END

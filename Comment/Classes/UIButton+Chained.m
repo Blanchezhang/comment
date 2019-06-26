@@ -124,4 +124,33 @@
 }
 
 
++(UIButton * (^)(void))CH_Alloc{
+    __weak typeof(self) wself = self;
+    return ^id(){
+        return [wself alloc];
+    };
+}
+
++(UIButton * (^)(CGRect rect))CH_InitFrame{
+    __weak typeof(self) wself = self;
+    return ^id(CGRect rect){
+        return [[wself alloc]initWithFrame:rect];
+    };
+}
+
++(UIButton * (^)(void))CH_Init{
+    __weak typeof(self) wself = self;
+    return ^id(void){
+        return [[wself alloc]init];
+    };
+}
+
+-(UIButton * (^)(void))CH_init{
+    __weak typeof(self) wself = self;
+    return ^id(void){
+        return [wself init];
+    };
+}
+
+
 @end

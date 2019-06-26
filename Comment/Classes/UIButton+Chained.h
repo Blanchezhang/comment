@@ -37,6 +37,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage *(^)(UIControlState state))CH_BackgroundImageColorForState;
 - (NSAttributedString *(^)(UIControlState state))CH_AttributedTitleForState;
 
+
++(UIButton * (^)(void))CH_Alloc;
+
++(UIButton * (^)(CGRect rect))CH_InitFrame;
+
++(UIButton * (^)(void))CH_Init;
+
+-(UIButton * (^)(void))CH_init;
+
 @end
 
 NS_ASSUME_NONNULL_END

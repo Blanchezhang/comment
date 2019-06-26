@@ -104,4 +104,33 @@
 
 }
 
+
++(UILabel * (^)(void))CH_Alloc{
+    __weak typeof(self) wself = self;
+    return ^id(){
+        return [wself alloc];
+    };
+}
+
++(UILabel * (^)(CGRect rect))CH_InitFrame{
+    __weak typeof(self) wself = self;
+    return ^id(CGRect rect){
+        return [[wself alloc]initWithFrame:rect];
+    };
+}
+
++(UILabel * (^)(void))CH_Init{
+    __weak typeof(self) wself = self;
+    return ^id(void){
+        return [[wself alloc]init];
+    };
+}
+
+-(UILabel * (^)(void))CH_init{
+    __weak typeof(self) wself = self;
+    return ^id(void){
+        return [wself init];
+    };
+}
+
 @end
